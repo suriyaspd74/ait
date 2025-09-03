@@ -11,7 +11,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+     permissions:
+      contents: read
+      packages: write
 
       - name: Build and Push Image
         run: |
