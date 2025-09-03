@@ -44,5 +44,6 @@ jobs:
             docker run -d --name strapi -p 1337:1337 \
               -e APP_KEYS="${{ secrets.APP_KEYS }}" \
               -e API_TOKEN_SALT="${{ secrets.API_TOKEN_SALT }}" \
+              -e ADMIN_JWT_SECRET="${{ secrets.ADMIN_JWT_SECRET }}" \
               $IMAGE
 
