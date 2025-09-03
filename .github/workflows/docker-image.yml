@@ -15,5 +15,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag strapi:latest
+    
+    - name: Log In to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: suriyaspd74
+        password: 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
+        
+    - name: Build and Push docker image
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        push: true
+        tags: ghcr.io/ait/strapi:latest
 
