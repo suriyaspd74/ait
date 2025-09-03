@@ -27,7 +27,6 @@ jobs:
           source: "./strapi-app.tar"
           target: "~/strapi-app.tar"
 
-
       - name: Deploy & Run Strapi
         uses: appleboy/ssh-action@v1.2.0
         with:
