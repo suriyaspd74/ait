@@ -43,5 +43,6 @@ jobs:
             docker rm strapi || true
             docker run -d --name strapi -p 1337:1337 \
               -e APP_KEYS="${{ secrets.APP_KEYS }}" \
+              -e API_TOKEN_SALT="${{ secrets.API_TOKEN_SALT }}" \
               $IMAGE
 
