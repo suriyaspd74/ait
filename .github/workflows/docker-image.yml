@@ -16,9 +16,4 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag strapi:latest
-    - name: Build and push docker images
-      uses: docker/build-push-actions@v6
-      with:
-        context: .
-        push: true
-        tags: ghcr.io/${{ github.repository }}/strapi:latest
+
