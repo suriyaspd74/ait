@@ -21,4 +21,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ githb.repository }}/strapi:latest
+        tags: ghcr.io/${{ github.repository }}/strapi:latest
